@@ -9,13 +9,13 @@ The usage is pretty easy
 
 Let's say you have this
 
-  Calculation c = new Calculation();
+ ##### Calculation c = new Calculation();
   
-  c.Add();
+#####  c.Add();
 
 And you want 
   
-  .Add 
+ ##### .Add 
   
 to be thread safe
 
@@ -25,10 +25,10 @@ Install-Package ThreadSafeObject
 
 Then modify your code to:
 
-  Calculation c = new Calculation();
+ ##### Calculation c = new Calculation();
   
-  dynamic ts = new ThreadSafe(c);
+ ##### dynamic ts = new ThreadSafe(c);
   
-  ts.Add();
+ ##### ts.Add();
 
 
