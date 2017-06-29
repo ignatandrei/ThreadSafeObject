@@ -32,3 +32,5 @@ Then modify your code to:
  ##### ts.Add();
 
 
+More details at 
+http://msprogrammer.serviciipeweb.ro/2017/07/10/making-any-call-to-a-function-of-an-object-thread-safe/
