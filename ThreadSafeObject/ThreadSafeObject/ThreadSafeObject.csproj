@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.2</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Andrei Ignat</Authors>
+    <Company />
+    <Product />
+    <Description>Makes any call to a function of an object thread safe</Description>
+    <PackageProjectUrl>https://github.com/ignatandrei/ThreadSafeObject</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ignatandrei/ThreadSafeObject</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>Thread Safe</PackageTags>
+    <PackageReleaseNotes>Version 1</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <TreatSpecificWarningsAsErrors />
+    <DocumentationFile>bin\Debug\netstandard1.2\ThreadSafeObject.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NuGet.CommandLine" Version="4.1.0" />
+    <PackageReference Include="System.Dynamic.Runtime" Version="4.3.0" />
+    <PackageReference Include="System.Reflection" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>
