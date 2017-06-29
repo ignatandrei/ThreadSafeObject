@@ -8,10 +8,12 @@ The solution contain tests and 2 console project for .NET Core and .NET Framewor
 The usage is pretty easy
 Let's say you have this
 
-Calculation c = new Calculation();
-c.Add();
+  Calculation c = new Calculation();
+  c.Add();
 
-And you want .Add to be thread safe
+And you want 
+  .Add 
+to be thread safe
 
 In the Package Manager Console write:
 
@@ -19,8 +21,8 @@ Install-Package ThreadSafeObject
 
 Then modify your code to:
 
-Calculation c = new Calculation();
-dynamic ts = new ThreadSafe(c);
-ts.Add();
+  Calculation c = new Calculation();
+  dynamic ts = new ThreadSafe(c);
+  ts.Add();
 
 
