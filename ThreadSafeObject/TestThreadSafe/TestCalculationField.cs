@@ -11,7 +11,7 @@ namespace TestThreadSafe
 	public class TestCalculationField
 	{
 		[TestMethod]
-		public void NotThreadSafeProperty()
+		public void NotThreadSafeField()
 		{
 			int nrIterations = 100000;
 			Calculation c = new Calculation();
@@ -27,7 +27,7 @@ namespace TestThreadSafe
 			Assert.AreNotEqual(nrIterations, c.i);
 		}
 		[TestMethod]
-		public void ThreadSafePropertyNotWorking()
+		public void ThreadSafeField()
 		{
 			int nrIterations = 100000;
 			Calculation c = new Calculation();

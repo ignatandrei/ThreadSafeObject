@@ -27,7 +27,7 @@ namespace TestThreadSafe
             Assert.AreNotEqual(nrIterations, c.Value);
         }
         [TestMethod]
-        public void ThreadSafePropertyNotWorking()
+        public void ThreadSafeProperty()
         {
             int nrIterations = 100000;
             Calculation c = new Calculation();

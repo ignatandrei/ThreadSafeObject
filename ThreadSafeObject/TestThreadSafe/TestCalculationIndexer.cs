@@ -11,7 +11,7 @@ namespace TestThreadSafe
 	public class TestCalculationIndexer
 	{
 		[TestMethod]
-		public void NotThreadSafeProperty()
+		public void NotThreadSafeIndexer()
 		{
 			int nrIterations = 100000;
 			Calculation c = new Calculation();
@@ -27,7 +27,7 @@ namespace TestThreadSafe
 			Assert.AreNotEqual(nrIterations, c["key"]);
 		}
 		[TestMethod]
-		public void ThreadSafePropertyNotWorking()
+		public void ThreadSafeIndexer()
 		{
 			int nrIterations = 100000;
 			Calculation c = new Calculation();
