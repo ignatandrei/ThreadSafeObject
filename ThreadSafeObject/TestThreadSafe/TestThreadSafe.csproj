@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\..\..\..\NuGetPackages\MSTest.TestAdapter.1.1.11\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\..\..\..\..\..\NuGetPackages\MSTest.TestAdapter.1.1.11\build\net45\MSTest.TestAdapter.props')" />
   <Import Project="..\packages\MSTest.TestAdapter.1.1.11\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.1.11\build\net45\MSTest.TestAdapter.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -40,10 +41,10 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MSTest.TestFramework.1.1.11\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\NuGetPackages\MSTest.TestFramework.1.1.11\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MSTest.TestFramework.1.1.11\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\NuGetPackages\MSTest.TestFramework.1.1.11\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,11 +53,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCalculationAdd.cs" />
     <Compile Include="TestCalculationAddDecrease.cs" />
+    <Compile Include="TestCalculationField.cs" />
+    <Compile Include="TestCalculationIndexer.cs" />
     <Compile Include="TestCalculationProperty.cs" />
     <Compile Include="TestCalculationOperation.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TestObject\TestObject.csproj">
@@ -68,6 +68,9 @@
       <Name>ThreadSafeObject</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -76,6 +79,9 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.1.11\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.1.11\build\net45\MSTest.TestAdapter.props'))" />
     <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.1.11\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.1.11\build\net45\MSTest.TestAdapter.targets'))" />
+    <Error Condition="!Exists('..\..\..\..\..\..\NuGetPackages\MSTest.TestAdapter.1.1.11\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\NuGetPackages\MSTest.TestAdapter.1.1.11\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\..\..\..\..\..\NuGetPackages\MSTest.TestAdapter.1.1.11\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\NuGetPackages\MSTest.TestAdapter.1.1.11\build\net45\MSTest.TestAdapter.targets'))" />
   </Target>
   <Import Project="..\packages\MSTest.TestAdapter.1.1.11\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.1.11\build\net45\MSTest.TestAdapter.targets')" />
+  <Import Project="..\..\..\..\..\..\NuGetPackages\MSTest.TestAdapter.1.1.11\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\..\..\..\..\..\NuGetPackages\MSTest.TestAdapter.1.1.11\build\net45\MSTest.TestAdapter.targets')" />
 </Project>
