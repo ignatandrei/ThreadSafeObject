@@ -24,6 +24,10 @@ namespace TestNet45
             tasks.ForEach(t => t.Start());
             Task.WaitAll(tasks.ToArray());
             Console.WriteLine($"task iterations {nrIterations} result: {c.i}");
+
+            Console.WriteLine($"Field access: {ts.i}");
+            Console.WriteLine($"Property access: {ts.Value}");
+            Console.WriteLine($"Indexer access: {ts["key"]}");
         }
     }
 }

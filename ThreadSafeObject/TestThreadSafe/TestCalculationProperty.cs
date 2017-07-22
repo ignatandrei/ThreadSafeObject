@@ -18,16 +18,16 @@ namespace TestThreadSafe
             List<Task> tasks = new List<Task>();
             for (int i = 0; i < nrIterations; i++)
             {
-                var t = new Task<int>(() => c.i++);
+                var t = new Task<int>(() => c.Value++);
                 tasks.Add(t);
             }
             tasks.ForEach(t => t.Start());
             Task.WaitAll(tasks.ToArray());
-            Console.WriteLine("Result not thread safe" + c.i);
-            Assert.AreNotEqual(nrIterations, c.i);
+            Console.WriteLine("Result not thread safe" + c.Value);
+            Assert.AreNotEqual(nrIterations, c.Value);
         }
         [TestMethod]
-        public void ThreadSafePropertyNotWorking()
+        public void ThreadSafeProperty()
         {
             int nrIterations = 100000;
             Calculation c = new Calculation();
@@ -35,12 +35,12 @@ namespace TestThreadSafe
             List<Task> tasks = new List<Task>();
             for (int i = 0; i < nrIterations; i++)
             {
-                var t = new Task<int>(() => ts.i++);
+                var t = new Task<int>(() => ts.Value++);
                 tasks.Add(t);
             }
             tasks.ForEach(t => t.Start());
             Task.WaitAll(tasks.ToArray());
-            Assert.AreNotEqual(nrIterations, c.i);
+            Assert.AreNotEqual(nrIterations, c.Value);
         }
     }
 }

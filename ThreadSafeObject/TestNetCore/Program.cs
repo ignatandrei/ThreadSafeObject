@@ -8,7 +8,7 @@ namespace TestNetCore
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             int nrIterations = 100000;
             Calculation c = new Calculation();
@@ -22,6 +22,10 @@ namespace TestNetCore
             tasks.ForEach(t => t.Start());
             Task.WaitAll(tasks.ToArray());
             Console.WriteLine($"task iterations {nrIterations} result: {c.i}");
+
+            Console.WriteLine($"Field access: {ts.i}");
+            Console.WriteLine($"Property access: {ts.Value}");
+            Console.WriteLine($"Indexer access: {ts["key"]}");
         }
     }
 }

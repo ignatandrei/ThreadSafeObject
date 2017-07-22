@@ -1,17 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestThreadSafe", "TestThreadSafe\TestThreadSafe.csproj", "{B5ED6243-089C-4CAB-B512-8F7291D8C885}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadSafeObject", "ThreadSafeObject\ThreadSafeObject.csproj", "{063B19C1-956C-45E3-8091-0140C987D93F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadSafeObject", "ThreadSafeObject\ThreadSafeObject.csproj", "{063B19C1-956C-45E3-8091-0140C987D93F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestObject", "TestObject\TestObject.csproj", "{98E483C7-1434-46D3-8D6F-0CC72FEC8F54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestObject", "TestObject\TestObject.csproj", "{98E483C7-1434-46D3-8D6F-0CC72FEC8F54}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNet45", "TestNet45\TestNet45.csproj", "{E2CB9B76-1BDE-4EE4-9BEF-454119BD335D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNetCore", "TestNetCore\TestNetCore.csproj", "{0F839E70-2D4D-44CA-9BBB-2DCEDE6AC01F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestNetCore", "TestNetCore\TestNetCore.csproj", "{0F839E70-2D4D-44CA-9BBB-2DCEDE6AC01F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1212EF97-3031-45A8-A6E0-BECDF0BCA215}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
